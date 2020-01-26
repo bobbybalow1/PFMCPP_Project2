@@ -13,15 +13,15 @@ video: Chapter 2 - Part 3
  
  1) Write down the names of all of the primitives available in C++ (excluding wchar_t)
  put them here: 
- 
- 
- 
- 
- 
- 
- 
- 
- 
+ ****************************
+ integer
+ character
+ boolean
+ floating point
+ double floating point
+ void
+ wide character
+ ****************************
  
  
 2) for each primitive type, write out 3 variable declarations inside the variableDeclaration function.
@@ -56,10 +56,36 @@ void variableDeclarations()
 {
     //example:
     int number = 2; //declaration of a primitive named 'number' with an initial value of '2'
-    
-    
+    int secondNumber = 3;
+    int thirdNumber = 4;
+    char firstInitial = 2;
+    char lastInitial = 3;
+    char middleInitial = 4;
+    bool thisIsTrue = true;
+    bool thisIsFalse = false;
+    bool isCorrect = true;
+    float firstFloat = 10.0f;
+    float secondFloat = 1.f;
+    float thirdFloat = 10.f;
+    double firstDouble = 10.44449;
+    double secondDouble = 11.5;
+    double thirdDouble = 12;
     
     ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
+    ignoreUnused(secondNumber);
+    ignoreUnused(thirdNumber);
+    ignoreUnused(firstInitial);
+    ignoreUnused(lastInitial);
+    ignoreUnused(middleInitial);
+    ignoreUnused(thisIsTrue);
+    ignoreUnused(thisIsFalse);
+    ignoreUnused(isCorrect);
+    ignoreUnused(firstFloat);
+    ignoreUnused(secondFloat);
+    ignoreUnused(thirdFloat);
+    ignoreUnused(firstDouble);
+    ignoreUnused(secondDouble);
+    ignoreUnused(thirdDouble);
 }
 /*
  10 functions
@@ -71,45 +97,75 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
     return {}; //if your function returns something other than void, add 'return {};' at the end of it.
 } 
 
-/*
- 1)
- */
+//Function 1
+int yearsWorking(int job1 = 4, int job2 = 10)
+{ 
+    ignoreUnused(job1, job2);
+    return {}; //function returns int.
+}
 
-/*
- 2)
- */
+//Function 2
+void myFunction2(int color, double size)
+{ 
+    ignoreUnused(color, size);
 
-/*
- 3)
- */
+}
 
-/*
- 4)
- */
+//Function 3
+int dog(int water = 1, int food = 0, int walk = 0)
+{ 
+    ignoreUnused(water, food, walk);
+    return {}; //function returns int.
+}
 
-/*
- 5)
- */
+//Function 4
+double food(double burger, double fries, int drink)
+{ 
+    ignoreUnused(burger, fries, drink);
+    return {}; //function returns int.
+}
 
-/*
- 6)
- */
+//Function 5
+void driveCar(int keys, float car)
+{
+    ignoreUnused(keys, car);
+}
 
-/*
- 7)
- */
+//Function 6
+bool rightSide(int left = 0, int right = 1)
+{ 
+    ignoreUnused(left, right);
+    return {}; //function returns int.
+}
 
-/*
- 8)
- */
+//Function 7
+bool invest(float returnOnInvestment)
+{ 
+    ignoreUnused(returnOnInvestment);
+    return {}; //function returns int.
+}
 
-/*
- 9)
- */
+//Function 8
+double unusedItems(float unused1, float unused2, float unused3)
+{ 
+    ignoreUnused(unused1, unused2, unused3);
+    return {}; //function returns int.
+}
 
-/*
- 10)
- */
+//Function 9
+bool playSound(int carHorn, double scream)
+{ 
+    ignoreUnused(carHorn, scream);
+    return {}; //function returns int.
+}
+
+//Function 10
+double homework(int doHomework, float timeInvested, double turnIn)
+{ 
+    ignoreUnused(doHomework, timeInvested, turnIn);
+    return {}; //function returns int.
+}
+
 
 int main()
 {
@@ -117,25 +173,26 @@ int main()
     rentACar(6, 2); 
     
     //1)
-    
+    yearsWorking(); //already initiailized
     //2)
-    
+    myFunction2(1,1.0000005);
     //3)
-    
+    dog(); //already initialized
     //4)
-    
+    food(1024, -1024, 8);
     //5)
-    
+    driveCar(3,1.000); // No "f" here for the 2nd value that is a float, correct? 
     //6)
-    
+    rightSide(); //already initialized
     //7)
-    
+    invest(1382346);
     //8)
-    
+    unusedItems(3,5,10);
     //9)
-    
+    playSound(1,0);
     //10)
-    
+    homework(1,1.00,0);
+
     std::cout << "good to go!" << std::endl;
     return 0;    
 }

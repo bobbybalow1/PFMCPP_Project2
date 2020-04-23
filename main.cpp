@@ -39,14 +39,20 @@ video: Chapter 2 - Part 3
 4) provide default values for an arbitrary number of parameters in the function parameter list.
     When naming your parameters, choose names that are relevant to the task implied by the function's name.
     
-5) in the main function at the end
-    for each of those functions declared, write out how the function would look if called with correct arguments
+5) in the main function at the end: 
+    for each of those functions declared, 
+        a) write out how the function would look if called with correct arguments
+        b) if the function returned anything, store it in a local variable via the 'auto' keyword.
+        c) pass the local variable to ignoreUnused() as you did in variableDeclarations()
+    see main() for an example of this.
  
  click the [run] button.  Clear up any errors or warnings as best you can.
  
  Commit your changes by clicking on the Source Control panel on the left, entering a message, and click [Commit and push].
  
- Send me the the link to your repl.it in a DM on Slack
+Make a pull request after you make your first commit and pin the pull request link to our DM thread.
+
+send me a DM to check your pull request
 
  Wait for my code review.
  */

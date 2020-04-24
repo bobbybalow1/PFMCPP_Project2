@@ -9,6 +9,9 @@ video: Chapter 2 - Part 3
  Declarations Tasks
 
  Create a branch named Part1
+
+ Purpose:  This project will teach you how to declare variables and free functions.  
+ This will be the first project where the code you write will be compiled and you will be responsible for making sure it compiles before submitting it for review.
  
  
  1) Write down the names of all of the primitives available in C++ (excluding wchar_t)
@@ -175,8 +178,8 @@ double homework(int doHomework, float timeInvested, double turnIn)
 
 int main()
 {
-    //example of calling that function
-    rentACar(6, 2); 
+    //example of calling that function, storing the value, and passing it to ignoreUnused at the end of main()
+    auto carRented = rentACar(6, 2); 
     
     //1)
     yearsWorking(); //already initiailized
@@ -198,7 +201,8 @@ int main()
     playSound(1,0);
     //10)
     homework(1,1.00,0);
-
+    
+    ignoreUnused(carRented);
     std::cout << "good to go!" << std::endl;
-    return 0;    
+    return 0;   
 }

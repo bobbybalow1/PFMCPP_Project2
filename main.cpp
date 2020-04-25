@@ -67,9 +67,9 @@ void variableDeclarations()
     int number = 2; //declaration of a primitive named 'number' with an initial value of '2'
     int secondNumber = 3;
     int thirdNumber = 4;
-    char firstInitial = 2;
-    char lastInitial = 3;
-    char middleInitial = 4;
+    char firstInitial = A;
+    char lastInitial = B;
+    char middleInitial = C;
     bool thisIsTrue = true;
     bool thisIsFalse = false;
     bool isCorrect = true;
@@ -78,7 +78,7 @@ void variableDeclarations()
     float thirdFloat = 10.f;
     double firstDouble = 10.44449;
     double secondDouble = 11.5;
-    double thirdDouble = 12;
+    double thirdDouble = 12.000;
     
     ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
     ignoreUnused(secondNumber);
@@ -101,31 +101,30 @@ void variableDeclarations()
  example:
  */
 bool rentACar(int rentalDuration, int carType = 0)  //function declaration with random number of arguments, arbitrary number of arguments have default value
-{ 
+    { 
     ignoreUnused(rentalDuration, carType); //passing each function parameter to the ignoreUnused() function
     return {}; //if your function returns something other than void, add 'return {};' at the end of it.
-} 
+    } 
 
 //Function 1
 int yearsWorking(int job1 = 4, int job2 = 10)
-{ 
+    { 
     ignoreUnused(job1, job2);
     return {}; //function returns int.
-}
+    }
 
 //Function 2
 void myFunction2(int color, double size)
-{ 
+    { 
     ignoreUnused(color, size);
-
-}
+    }
 
 //Function 3
 int dog(int water = 1, int food = 0, int walk = 0)
-{ 
+    { 
     ignoreUnused(water, food, walk);
     return {}; //function returns int.
-}
+    }
 
 //Function 4
 double food(double burger, double fries, int drink)
@@ -184,23 +183,23 @@ int main()
     //1)
     yearsWorking(); //already initiailized
     //2)
-    myFunction2(1,1.0000005);
+    myFunction2(1, 1.0000005);
     //3)
     dog(); //already initialized
     //4)
     food(1024, -1024, 8);
     //5)
-    driveCar(3,1.000); // No "f" here for the 2nd value that is a float, correct? 
+    driveCar(3, 1.000); // No "f" here for the 2nd value that is a float, correct? 
     //6)
     rightSide(); //already initialized
     //7)
     invest(1382346);
     //8)
-    unusedItems(3,5,10);
+    unusedItems(3, 5, 10);
     //9)
-    playSound(1,0);
+    playSound(1, 0);
     //10)
-    homework(1,1.00,0);
+    homework(1, 1.00, 0);
     
     ignoreUnused(carRented);
     std::cout << "good to go!" << std::endl;

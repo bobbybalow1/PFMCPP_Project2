@@ -67,9 +67,9 @@ void variableDeclarations()
     int number = 2; //declaration of a primitive named 'number' with an initial value of '2'
     int secondNumber = 3;
     int thirdNumber = 4;
-    char firstInitial = A;
-    char lastInitial = B;
-    char middleInitial = C;
+    char firstInitial = 66;
+    char lastInitial = 66;
+    char middleInitial = 66;
     bool thisIsTrue = true;
     bool thisIsFalse = false;
     bool isCorrect = true;

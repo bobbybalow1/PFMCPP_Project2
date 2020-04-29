@@ -23,7 +23,6 @@ video: Chapter 2 - Part 3
  floating point
  double floating point
  void
- wide character
  ****************************
  
  
@@ -114,63 +113,63 @@ int yearsWorking(int job1 = 4, int job2 = 10)
     }
 
 //Function 2
-void myFunction2(int color, double size)
+void paintCar(int color, double howMuchPaint)
     { 
-    ignoreUnused(color, size);
+    ignoreUnused(color, howMuchPaint); // Do I need to include this or just remove this because it returns void?
     }
 
 //Function 3
-int dog(int water = 1, int food = 0, int walk = 0)
+bool careForDog(int hasWater = 1, int hasFood = 0, int hasWalk = 0)
     { 
-    ignoreUnused(water, food, walk);
-    return {}; //function returns int.
+    ignoreUnused(hasWater, hasFood, hasWalk);
+    return {}; //function returns bool.
     }
 
 //Function 4
-double food(double burger, double fries, int drink)
+double eatDinner(double numOfBurgers = 1.00000, double numOfFries = 192.0005, int numOfDrink = 5)
 { 
-    ignoreUnused(burger, fries, drink);
-    return {}; //function returns int.
+    ignoreUnused(numOfBurgers, numOfFries, numOfDrink);
+    return {}; //function returns double.
 }
 
 //Function 5
-void driveCar(int keys, float car)
+void createAccounts(int numOfUsers, float howMuchMoney)
 {
-    ignoreUnused(keys, car);
+    ignoreUnused(numOfUsers, howMuchMoney);
 }
 
 //Function 6
-bool rightSide(int left = 0, int right = 1)
+bool backgroundCheck(int numOfCrimes = 0, int numOfTickets = 1)
 { 
-    ignoreUnused(left, right);
-    return {}; //function returns int.
+    ignoreUnused(numOfCrimes, numOfTickets);
+    return {}; //function returns bool.
 }
 
 //Function 7
 bool invest(float returnOnInvestment)
 { 
     ignoreUnused(returnOnInvestment);
-    return {}; //function returns int.
+    return {}; //function returns bool.
 }
 
 //Function 8
-double unusedItems(float unused1, float unused2, float unused3)
+double record(float lengthOfRecording, float sizeOfRecording, float fileFormat)
 { 
-    ignoreUnused(unused1, unused2, unused3);
+    ignoreUnused(lengthOfRecording, sizeOfRecording, fileFormat);
     return {}; //function returns int.
 }
 
 //Function 9
-bool playSound(int carHorn, double scream)
+bool playSound(int howManyTimes, double howLong)
 { 
-    ignoreUnused(carHorn, scream);
-    return {}; //function returns int.
+    ignoreUnused(howManyTimes, howLong);
+    return {}; //function returns bool.
 }
 
 //Function 10
-double homework(int doHomework, float timeInvested, double turnIn)
+double doHomework(int amountCompleted, float timeInvested, double finalScore)
 { 
-    ignoreUnused(doHomework, timeInvested, turnIn);
+    ignoreUnused(amountCompleted, timeInvested, finalScore);
     return {}; //function returns int.
 }
 
@@ -181,27 +180,56 @@ int main()
     auto carRented = rentACar(6, 2); 
     
     //1)
-    yearsWorking(); //already initiailized
-    //2)
-    myFunction2(1, 1.0000005);
-    //3)
-    dog(); //already initialized
-    //4)
-    food(1024, -1024, 8);
-    //5)
-    driveCar(3, 1.000); // No "f" here for the 2nd value that is a float, correct? 
-    //6)
-    rightSide(); //already initialized
-    //7)
-    invest(1382346);
-    //8)
-    unusedItems(3, 5, 10);
-    //9)
-    playSound(1, 0);
-    //10)
-    homework(1, 1.00, 0);
+
+    auto workedForYears = yearsWorking(); //already initiailized
     
+    //2)
+    
+    //Returned Void
+    
+    //3)
+    
+    auto dogCaredFor = careForDog(); //already initialized
+    
+    //4)
+    
+    auto finishedDinner = eatDinner(); // already initialized
+    
+    //5)
+    
+    //Returned Void
+    
+    //6)
+    
+    auto eligibleForHiring = backgroundCheck(); //already initialized
+    
+    //7)
+    
+    auto madeInvestment = invest(10.5);
+    
+    //8)
+    
+    auto songRecorded = record(3.0105f, 10.2f, 2); //Do you pass floats with "f" at the end? or do you leave it as just a number?
+    
+    //9)
+    
+    auto userSound = playSound(1, 0.01000);
+    
+    //10)
+    
+    auto completedHomework = doHomework(100, 52.0, 100.00);
+    
+    //IGNORE FUNCTIONS
     ignoreUnused(carRented);
+    ignoreUnused(workedForYears);
+    ignoreUnused(dogCaredFor);
+    ignoreUnused(finishedDinner);
+    ignoreUnused(eligibleForHiring);
+    ignoreUnused(madeInvestment);
+    ignoreUnused(songRecorded);
+    ignoreUnused(userSound);
+    ignoreUnused(completedHomework);
+
     std::cout << "good to go!" << std::endl;
     return 0;   
 }

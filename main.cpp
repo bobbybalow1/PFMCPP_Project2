@@ -66,9 +66,9 @@ void variableDeclarations()
     int number = 2; //declaration of a primitive named 'number' with an initial value of '2'
     int secondNumber = 3;
     int thirdNumber = 4;
-    char firstInitial = 66;
-    char lastInitial = 66;
-    char middleInitial = 66;
+    char firstInitial = 'B';
+    char lastInitial = 'B';
+    char middleInitial = 'B';
     bool thisIsTrue = true;
     bool thisIsFalse = false;
     bool isCorrect = true;
@@ -79,51 +79,55 @@ void variableDeclarations()
     double secondDouble = 11.5;
     double thirdDouble = 12.000;
     
-    ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
-    ignoreUnused(secondNumber);
-    ignoreUnused(thirdNumber);
-    ignoreUnused(firstInitial);
-    ignoreUnused(lastInitial);
-    ignoreUnused(middleInitial);
-    ignoreUnused(thisIsTrue);
-    ignoreUnused(thisIsFalse);
-    ignoreUnused(isCorrect);
-    ignoreUnused(firstFloat);
-    ignoreUnused(secondFloat);
-    ignoreUnused(thirdFloat);
-    ignoreUnused(firstDouble);
-    ignoreUnused(secondDouble);
-    ignoreUnused(thirdDouble);
+    ignoreUnused
+    (
+        number, 
+        secondNumber, 
+        thirdNumber, 
+        firstInitial, 
+        lastInitial, 
+        middleInitial,
+        thisIsTrue,
+        thisIsFalse,
+        isCorrect,
+        firstFloat,
+        secondFloat,
+        thirdFloat,
+        firstDouble,
+        secondDouble,
+        thirdDouble
+    );
+    // Is this notation recommended for long lists???
 }
 /*
  10 functions
  example:
  */
 bool rentACar(int rentalDuration, int carType = 0)  //function declaration with random number of arguments, arbitrary number of arguments have default value
-    { 
+{ 
     ignoreUnused(rentalDuration, carType); //passing each function parameter to the ignoreUnused() function
     return {}; //if your function returns something other than void, add 'return {};' at the end of it.
-    } 
+} 
 
 //Function 1
 int yearsWorking(int job1 = 4, int job2 = 10)
-    { 
+{ 
     ignoreUnused(job1, job2);
     return {}; //function returns int.
-    }
+}
 
 //Function 2
 void paintCar(int color, double howMuchPaint)
-    { 
+{ 
     ignoreUnused(color, howMuchPaint); // Do I need to include this or just remove this because it returns void?
-    }
+}
 
 //Function 3
 bool careForDog(int hasWater = 1, int hasFood = 0, int hasWalk = 0)
-    { 
+{ 
     ignoreUnused(hasWater, hasFood, hasWalk);
     return {}; //function returns bool.
-    }
+}
 
 //Function 4
 double eatDinner(double numOfBurgers = 1.00000, double numOfFries = 192.0005, int numOfDrink = 5)
@@ -185,7 +189,7 @@ int main()
     
     //2)
     
-    //Returned Void
+    paintCar(3, 1.250);
     
     //3)
     
@@ -197,7 +201,7 @@ int main()
     
     //5)
     
-    //Returned Void
+    createAccounts(100, 1000000.f);
     
     //6)
     
@@ -220,15 +224,18 @@ int main()
     auto completedHomework = doHomework(100, 52.0, 100.00);
     
     //IGNORE FUNCTIONS
-    ignoreUnused(carRented);
-    ignoreUnused(workedForYears);
-    ignoreUnused(dogCaredFor);
-    ignoreUnused(finishedDinner);
-    ignoreUnused(eligibleForHiring);
-    ignoreUnused(madeInvestment);
-    ignoreUnused(songRecorded);
-    ignoreUnused(userSound);
-    ignoreUnused(completedHomework);
+    ignoreUnused
+    (
+        carRented,
+        workedForYears,
+        dogCaredFor,
+        finishedDinner,
+        eligibleForHiring,
+        madeInvestment,
+        songRecorded,
+        userSound,
+        completedHomework
+    );
 
     std::cout << "good to go!" << std::endl;
     return 0;   

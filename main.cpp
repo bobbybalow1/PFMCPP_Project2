@@ -79,25 +79,7 @@ void variableDeclarations()
     double secondDouble = 11.5;
     double thirdDouble = 12.000;
     
-    ignoreUnused
-    (
-        number, 
-        secondNumber, 
-        thirdNumber, 
-        firstInitial, 
-        lastInitial, 
-        middleInitial,
-        thisIsTrue,
-        thisIsFalse,
-        isCorrect,
-        firstFloat,
-        secondFloat,
-        thirdFloat,
-        firstDouble,
-        secondDouble,
-        thirdDouble
-    );
-    // Is this notation recommended for long lists???
+    ignoreUnused (number, secondNumber, thirdNumber, firstInitial, lastInitial, middleInitial, thisIsTrue, thisIsFalse, isCorrect, firstFloat, secondFloat, thirdFloat, firstDouble, secondDouble, thirdDouble);
 }
 /*
  10 functions
@@ -173,7 +155,7 @@ bool playSound(int howManyTimes, double howLong)
 //Function 10
 double doHomework(int amountCompleted, float timeInvested, double finalScore)
 { 
-    ignoreUnused(amountCompleted, timeInvested, finalScore);
+    ignoreUnused( amountCompleted, timeInvested, finalScore );
     return {}; //function returns int.
 }
 
@@ -224,18 +206,7 @@ int main()
     auto completedHomework = doHomework(100, 52.0, 100.00);
     
     //IGNORE FUNCTIONS
-    ignoreUnused
-    (
-        carRented,
-        workedForYears,
-        dogCaredFor,
-        finishedDinner,
-        eligibleForHiring,
-        madeInvestment,
-        songRecorded,
-        userSound,
-        completedHomework
-    );
+    ignoreUnused( carRented, workedForYears, dogCaredFor, finishedDinner, eligibleForHiring, madeInvestment, songRecorded, userSound, completedHomework );
 
     std::cout << "good to go!" << std::endl;
     return 0;   
